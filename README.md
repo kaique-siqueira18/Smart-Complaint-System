@@ -1,71 +1,93 @@
 # 🚀 Smart Complaint System
 
-Sistema inteligente de monitoramento de restaurantes com análise de qualidade e detecção automática de problemas.
+Sistema de monitoramento de restaurantes com análise inteligente de desempenho e identificação de riscos operacionais.
 
 ---
 
-## 📌 Sobre o projeto
+## 🧠 Sobre o Projeto
 
-Este projeto foi desenvolvido com o objetivo de simular um sistema real de monitoramento de restaurantes, inspirado em plataformas como iFood e Uber Eats.
+O **Smart Complaint System** (Sistema Inteligente de Reclamações) foi desenvolvido com o objetivo de analisar dados de avaliações de restaurantes e identificar automaticamente possíveis problemas operacionais.
 
-A aplicação permite identificar restaurantes com baixo desempenho, detectar quedas na qualidade ao longo do tempo e gerar relatórios automáticos com base nos dados coletados.
-
----
-
-## 🧠 Funcionalidades
-
-- 📊 Cadastro e gerenciamento de restaurantes (CRUD)
-- ⚠️ Detecção automática de restaurantes problemáticos
-- 🚨 Classificação por nível de risco:
-  - OK
-  - ALERTA
-  - CRÍTICO
-- 📉 Monitoramento de queda de desempenho (lastRating)
-- 🏆 Ranking dos piores restaurantes
-- 🔍 Filtro por status e avaliações
-- 🤖 Integração com Python para análise de dados
-- 📄 Geração automática de relatórios
-- 🔄 Monitoramento contínuo (execução automática)
+Diferente de um CRUD tradicional, este projeto aplica lógica de negócio para interpretar dados e classificar os restaurantes com base em seu desempenho.
 
 ---
 
-## 🏗️ Arquitetura do sistema
+## 💡 Como funciona
 
-O projeto foi dividido em duas partes principais:
+Cada restaurante é analisado com base em:
 
-### 🔹 Back-end (Java - Spring Boot)
-Responsável por:
-- Gerenciar dados dos restaurantes
-- Aplicar regras de negócio
-- Expor API REST
+- ⭐ Média de avaliações
+- 📊 Quantidade de reviews
+- 📉 Última avaliação recebida
 
-### 🔹 Análise de dados (Python)
-Responsável por:
-- Consumir a API
-- Analisar padrões de qualidade
-- Detectar piora de desempenho
-- Gerar relatórios automáticos
+Com base nesses dados, o sistema classifica automaticamente o restaurante em:
+
+- 🟢 **OK** → Operação saudável  
+- 🟡 **ALERTA** → Sinais de queda de qualidade  
+- 🔴 **CRÍTICO** → Risco operacional identificado  
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## ⚙️ Tecnologias utilizadas
 
-- Java (Spring Boot)
-- PostgreSQL
-- Python
-- Requests (Python)
+### Backend
+- Java
+- Spring Boot
 - API REST
+- JPA / Hibernate
+
+### Frontend
+- HTML
+- Tailwind CSS
+- JavaScript (fetch API)
+
+### Automação de dados
+- Python (seed e análise de dados)
 
 ---
 
-## ▶️ Como executar o projeto
+## 📊 Funcionalidades
 
-### 1️⃣ Rodar o Back-end (Java)
+- ✔️ CRUD completo de restaurantes  
+- ✔️ Classificação automática de status (OK, ALERTA, CRÍTICO)  
+- ✔️ Dashboard com visualização dos dados  
+- ✔️ Busca dinâmica em tempo real  
+- ✔️ Endpoints específicos:
+  - `/restaurants`
+  - `/alerts`
+  - `/critical`
+  - `/ranking`
+- ✔️ Integração completa entre backend e frontend  
+- ✔️ Simulação de dados reais com Python  
 
-- Abrir o projeto no Eclipse ou IntelliJ
-- Executar a aplicação Spring Boot
-- A API estará disponível em:
+---
 
-## 📌 Autor
+## 🌐 API Endpoints
 
-Desenvolvido por [Kaique Siqueira ]
+| Método | Endpoint | Descrição |
+|--------|--------|----------|
+| GET | /restaurants | Lista todos os restaurantes |
+| GET | /alerts | Lista restaurantes em alerta |
+| GET | /critical | Lista restaurantes críticos |
+| GET | /ranking | Ranking por desempenho |
+| POST | /restaurants | Cria um restaurante |
+| PUT | /restaurants/{id} | Atualiza um restaurante |
+| DELETE | /restaurants/{id} | Remove um restaurante |
+
+---
+
+## 📸 Preview do Sistema
+
+*(adicione aqui prints do seu dashboard)*
+
+---
+
+## 🚀 Como rodar o projeto
+
+### 🔧 Backend (Spring Boot)
+
+```bash
+# Rodar aplicação
+./mvnw spring-boot:run
+
+Desenvolvido por [Kaique Siqueira  ]
