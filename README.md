@@ -74,11 +74,6 @@ Com base nesses dados, o sistema classifica automaticamente o restaurante em:
 | PUT | /restaurants/{id} | Atualiza um restaurante |
 | DELETE | /restaurants/{id} | Remove um restaurante |
 
----
-
-## 📸 Preview do Sistema
-
-*(adicione aqui prints do seu dashboard)*
 
 ---
 
