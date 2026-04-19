@@ -1,0 +1,34 @@
+=== RELATÓRIO AUTOMÁTICO ===
+
+TOP 3 PIORES:
+Pizza Rush Caótica - Nota: 1.8 - Status: CRITICO
+Pizza Rush Caótica - Nota: 1.8 - Status: CRITICO
+Pizza Rush Caótica - Nota: 1.8 - Status: CRITICO
+
+QUEDAS FORTES:
+
+ALERTAS:
+ALERTA: Habib's Paulista
+ALERTA: Burger King Brooklin
+ALERTA: China in Box Itaim
+CRÍTICO: Delivery Express Caos
+ALERTA: Restaurante Sabor Perdido
+ALERTA: FastFood Colapso Center
+ALERTA: Burguer Night Problema
+CRÍTICO: Pizza Rush Caótica
+ALERTA: Habib's Paulista
+ALERTA: Burger King Brooklin
+ALERTA: China in Box Itaim
+CRÍTICO: Delivery Express Caos
+ALERTA: Restaurante Sabor Perdido
+ALERTA: FastFood Colapso Center
+ALERTA: Burguer Night Problema
+CRÍTICO: Pizza Rush Caótica
+ALERTA: Habib's Paulista
+ALERTA: Burger King Brooklin
+ALERTA: China in Box Itaim
+CRÍTICO: Delivery Express Caos
+ALERTA: Restaurante Sabor Perdido
+ALERTA: FastFood Colapso Center
+ALERTA: Burguer Night Problema
+CRÍTICO: Pizza Rush Caótica

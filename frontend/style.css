@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap');
+
+* {
+    transition: all 0.25s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.header-glow {
+    background: linear-gradient(90deg, #00d4ff, #0099cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.2);
+}
+
+.status-ok { background-color: #10b981; color: #052e16; }
+.status-alert { background-color: #f59e0b; color: #451a03; }
+.status-critical { background-color: #ef4444; color: white; }
