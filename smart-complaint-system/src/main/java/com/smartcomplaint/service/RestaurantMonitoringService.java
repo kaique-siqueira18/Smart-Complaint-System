@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 public class RestaurantMonitoringService {
 
     public boolean isProblematic(Restaurant restaurant) {
-        // Verifica se os dados não são nulos para evitar erro de NullPointerException
+        
         if (restaurant.getAverageRating() != null &&
             restaurant.getTotalReviews() != null) {
             
-            // Lógica: Nota menor que 3.0 E pelo menos 5 avaliações
+            
             if (restaurant.getAverageRating() < 3.0 && restaurant.getTotalReviews() >= 5) {
                 return true;
             }

@@ -35,33 +35,33 @@ public class RestaurantService {
                 .orElseThrow(() -> new ResourceNotFoundException("Restaurante não encontrado"));
     }
 
-    // ================= UPDATE =================
+  
     public Restaurant update(Long id, Restaurant newData) {
 
         Restaurant restaurant = findById(id);
 
         restaurant.setName(newData.getName());
 
-        // guarda nota antiga
+       
         restaurant.setLastRating(restaurant.getAverageRating());
 
-        // atualiza nova nota
+        
         restaurant.setAverageRating(newData.getAverageRating());
 
         restaurant.setTotalReviews(newData.getTotalReviews());
 
-        // recalcula regras
+      
         recalcularStatusEProblematico(restaurant);
 
         return repository.save(restaurant);
     }
 
-    // ================= DELETE =================
+ 
     public void delete(Long id) {
         repository.deleteById(id);
     }
 
-    // ================= ALERTS =================
+
     public List<Restaurant> findAlerts() {
         return repository.findByProblematicTrue();
     }
@@ -70,7 +70,6 @@ public class RestaurantService {
         return repository.findByStatus(status);
     }
 
-    // ================= RANKING =================
     public List<Restaurant> getRanking() {
         return repository.findByOrderByAverageRatingAsc();
     }
@@ -79,7 +78,7 @@ public class RestaurantService {
         return repository.findByAverageRatingLessThanAndTotalReviewsGreaterThanEqual(rating, minReviews);
     }
 
-    // ================= REGRA CENTRAL =================
+
     private void recalcularStatusEProblematico(Restaurant restaurant) {
 
         if (restaurant.getAverageRating() != null && restaurant.getAverageRating() < 2.0) {

@@ -16,7 +16,6 @@ public class RestaurantController {
     private final RestaurantMonitoringService monitoringService;
     
 
-    // AQUI ESTAVA O ERRO: Precisamos passar os dois aqui dentro
     public RestaurantController(RestaurantService service, RestaurantMonitoringService monitoringService) {
         this.service = service;
         this.monitoringService = monitoringService;
@@ -25,11 +24,11 @@ public class RestaurantController {
 
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody Restaurant restaurant) {
-        // 1. Salva o restaurante
+        
         Restaurant salvo = service.save(restaurant);
         
         
-        // 3. Se estiver tudo bem, manda o JSON normal
+        
         return ResponseEntity.ok(salvo);
     }
 

@@ -7,9 +7,7 @@ def executar_monitoramento():
 
     print("\n⏳ Rodando análise...\n")
 
-    # =========================
-    # TOP 3 PIORES
-    # =========================
+ 
     ordenados = sorted(data, key=lambda x: x["averageRating"])
     top3 = ordenados[:3]
 
@@ -17,9 +15,6 @@ def executar_monitoramento():
     for r in top3:
         print(f"{r['name']} - Nota: {r['averageRating']} - Status: {r['status']}")
 
-    # =========================
-    # QUEDA FORTE
-    # =========================
     print("\n⚠️ QUEDAS FORTES:")
     for r in data:
         last = r.get("lastRating")
@@ -31,9 +26,7 @@ def executar_monitoramento():
             if queda >= 1.5:
                 print(f"{r['name']} caiu {queda} pontos")
 
-    # =========================
-    # ALERTAS AUTOMÁTICOS
-    # =========================
+ 
     print("\n🚨 ALERTAS:")
     for r in data:
         if r["status"] == "CRITICO":
@@ -41,9 +34,7 @@ def executar_monitoramento():
         elif r["status"] == "ALERTA":
             print(f"ALERTA: {r['name']}")
 
-    # =========================
-    # GERAR RELATÓRIO
-    # =========================
+
     with open("relatorio.txt", "w", encoding="utf-8") as f:
         f.write("=== RELATÓRIO AUTOMÁTICO ===\n\n")
 
@@ -73,9 +64,6 @@ def executar_monitoramento():
     
     return data
 
-# =========================
-# LOOP AUTOMÁTICO
-# =========================
 while True:
     data =  executar_monitoramento()
     time.sleep(60)  
